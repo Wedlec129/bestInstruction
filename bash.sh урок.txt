@@ -1,0 +1,74 @@
+#!/bin/bash
+
+a=12   #переменная
+b="pip"
+c=lol
+
+echo "привет мир =  $a $b $c"    #вывод примет мир и чмсло a
+echo
+
+#константы 
+echo $0          #имя файла
+echo $HOME       #показывает путь до глпвной директории
+echo $HOSTNAME   #имя компа 
+echo $HOSTTYPE   #тип архитектуры пк
+sleep 0          #задержка в сек
+echo $SECONDS    #сколько времени выполнялось
+echo $LOGNAME    #имя пользователя
+
+
+path=$(pwd) #записываем в переменную
+echo $path
+
+
+one=1
+two=2
+tree=$((one+two))
+echo $tree
+
+echo сколько вам лет ? 
+read age #ввод
+
+echo вам $age лет!
+
+
+
+if ((age>=18)); then
+echo ">>>>>>"
+
+else
+echo "<<<<<<"
+
+fi
+
+
+
+
+sayHello ()  {
+    
+    
+    echo "lol $2" #типо параметры
+    
+    
+    
+}
+ sayHello "ONE" "TWO" "TREE" # типо параметры
+
+
+
+
+
+for i in {1..5}
+do
+
+echo $i
+
+done
+
+
+pip=0
+while ((pip<9))
+do
+echo "$pip ) while"
+((pip++))
+done

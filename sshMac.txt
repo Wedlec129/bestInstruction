@@ -1,0 +1,58 @@
+
+----------------------------------------------------------------------------------------------
+	linux.        (https://hackware.ru/?p=9881)
+
+
+sudo systemctl start ssh.socket      |Для запуска службы SSH в Kali Linux:
+sudo systemctl stop ssh.socket       |Для выключ службы SSH в Kali Linux:
+sudo systemctl enable ssh.socket     |Для добавления службы в автозагрузку:
+systemctl status ssh.socket          |Для проверки состояния службы:
+
+ssh root@1qqq                подключиться
+
+scp kali@qqqq;/home/kali/Desktop/ntfsANDfat/hnmi /Users/wedlec/Downloads  |скачать файл с kali на мак в папку
+
+scp /Users/wedlec/Downloads/ntfs/10.10.16.01.img kali@qqqq.9:/home/kali/Desktop/ntfsANDfat загрузить(отправить) файл на сервер (с мака фал на kali)
+
+
+
+
+
+
+----------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+----------------------------------------------------------------------------------------------
+			MAC
+
+sudo systemsetup -setremotelogin on     |включить при автозапусе системы
+sudo systemsetup -setremotelogin off    |выключить при автозапусе системы
+
+ssh q@qqqq               подключить
+
+who -u                                  кто подключен 
+kill 1168                               отключить
+
+scp q@1q7:/Users/q/Desktop/text.txt /Users/wedlec/Desktop/  копируем файл
+
+osascript -e "set volume 0"             изменить громкость от 0 до 7
+screencapture test.jpg                  скриншот экрана
+
+open Terminal                           открыть прогу
+killall Terminal                        закрыть прогу
+
+sudo shutdown -h now                    Выключить комп
+
+----------------------------------------------------------------------------------------------
+
+
+
+
+

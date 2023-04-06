@@ -1,0 +1,60 @@
+TorIptables2 это прога позволяем пускать весь траки через тор
+
+1)sudo  vim /etc/NetworkManager/NetworkManager.conf
+
+
+[connection]
+wifi.cloned-mac-address=random
+
+[connection]
+ethernet.cloned-mac-address=random
+
+
+
+
+
+
+2)
+sudo apt-get install tor 
+sudo systemctl start tor
+sudo systemctl enable tor
+
+git clone https://github.com/ruped24/toriptables2
+cd toriptables2
+sudo mv toriptables2.py /usr/local/bin
+toriptables2.py -h
+
+sudo toriptables2.py -l   on        -f folse 	меняет только внешний ип
+
+sudo kill -HUP $(pidof tor)
+
+
+
+1)ip a (posmotret ip and mac)
+
+2)sudo toriptables2.py -l (-f set IP)
+
+3)sudo systemctl restart NetworkManager.service (set MAC)
+
+
+ip rout show      
+ip a
+sudo ip link set eth0 down  	выключить соединение с вайфаем
+
+
+
+
+
+
+
+
+1)ip a (posmotret ip and mac)
+
+2)sudo toriptables2.py -l (-f set IP)
+
+3)sudo systemctl restart NetworkManager.service (set MAC)
+
+
+
+
+

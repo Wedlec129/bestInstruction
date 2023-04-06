@@ -1,0 +1,15 @@
+hexdump -C lol.bmp 
+arch -arm64 brew install node
+
+
+ffmpeg -i /Users/wedlec/Desktop/test.png /Users/wedlec/Desktop/test.jpeg |коныертируем фото/видео
+
+
+
+git clone https://github.com/arismelachroinos/lscript.git
+cd lscript
+chmod +x install.sh
+./install.sh
+
+
+sudo stacer	типо Cclean

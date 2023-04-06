@@ -1,0 +1,6 @@
+Прога для анализа сетевых пакетов
+
+1) для начала нужно включить вайфай карту в режим монитора
+	1) sudo ifconfig wlan0 down && iwconfig wlan0 mode monitor && ifconfig wlan0 up
+	или 
+	1) sudo airmon-ng start wlan0

